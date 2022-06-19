@@ -13,7 +13,7 @@ func main() {
 
 	rl.InitWindow(screenWidth, screenHeight, "raylib [loading-text] example - ttf loading")
 
-	msg := "==||==="
+	msg := ":)"
 
 	// Catatan: Tekstur/font harus dimuat setelah inisialisasi jendela (diperlukan konteks OpenGL)
 
@@ -60,6 +60,10 @@ func main() {
 			fontPosition.X -= 10
 		} else if rl.IsKeyDown(rl.KeyRight) {
 			fontPosition.X += 10
+		} else if rl.IsKeyDown(rl.KeyUp) {
+			fontPosition.Y -= 10
+		} else if rl.IsKeyDown(rl.KeyDown) {
+			fontPosition.Y += 10
 		}
 
 		// load dropped TTF file dynamically (at current font size)
@@ -79,7 +83,7 @@ func main() {
 		rl.ClearBackground(rl.RayWhite)
 
 		rl.DrawText("Use mouse wheel to change font size", 20, 20, 10, rl.Gray)
-		rl.DrawText("Use KEY_RIGHT and KEY_LEFT to move text", 20, 40, 10, rl.Gray)
+		rl.DrawText("Use KEY_RIGHT,KEY_LEFT,KEY_UP,KEY_DOWN to move text", 20, 40, 10, rl.Gray)
 		rl.DrawText("Use 1, 2, 3 to change texture filter", 20, 60, 10, rl.Gray)
 		rl.DrawText("Drop a new TTF font for dynamic loading", 20, 80, 10, rl.DarkGray)
 
