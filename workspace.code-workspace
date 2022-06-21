@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "shapes"
+		},
+		{
+			"path": "texture"
 		}
 	],
 	"settings": {}
